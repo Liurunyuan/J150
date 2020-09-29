@@ -450,6 +450,60 @@ static int J150_TransTxEnQueOneFrame(SCITXQUE* txQue)
     return SUCCESS;
 }
 
+void J150_SET_WORK_STATUS(J150_SYS_STATUS sysStatus)
+{
+    switch(sysStatus)
+    {
+        case BIT_ING:
+            pSciTxAppProtocol->workStatus = J150_SCI_TX_BIG_ING;
+            break;
+
+        case BIT_NORMAL:
+            pSciTxAppProtocol->workStatus = J150_SCI_TX_BIG_NORMAL;
+            break;
+
+        case BIT_ABNORMAL:
+            pSciTxAppProtocol->workStatus = J150_SCI_TX_BIG_ABNORMAL;
+            break;
+
+        case CONFIG_PARA_ING: 
+            pSciTxAppProtocol->workStatus = J150_SCI_TX_CONFIG_PARA_ING;
+            break;
+
+        case CONFIG_PARA_NORMAL:
+            pSciTxAppProtocol->workStatus =  J150_SCI_TX_CONFIG_PARA_NORMAL;
+            break;
+
+        case CONFIG_PARA_ABNORMAL:
+            pSciTxAppProtocol->workStatus = J150_SCI_TX_CONFIG_PARA_ABNORMAL;
+            break;
+
+        case MOTOR_RUN_ING:
+            pSciTxAppProtocol->workStatus = J150_SCI_TX_MOTOR_RUN_ING;
+            break;
+
+        case MOTOR_RUN_NORMAL:
+            pSciTxAppProtocol->workStatus = J150_SCI_TX_MOTOR_RUN_NORMAL;
+            break;
+
+        case MOTOR_RUN_ABNORMAL:
+            pSciTxAppProtocol->workStatus = J150_SCI_TX_MOTOR_RUN_ABNORMAL;
+            break;
+
+        case MOTOR_STOP_ING:
+            pSciTxAppProtocol->workStatus = J150_SCI_TX_MOTOR_STOP_ING;
+            break;
+
+        case MOTOR_STOP_NORMAL:
+            pSciTxAppProtocol->workStatus = J150_SCI_TX_MOTOR_STOP_NORMAL;
+            break;
+
+        case MOTOR_STOP_ABNORMAL:
+            pSciTxAppProtocol->workStatus = J150_SCI_TX_MOTOR_STOP_ABNORMAL;
+            break;
+    }
+}
+
 void SCI_APP_PROTOCOL_TX_Init(SCI_APP_PROTOCOL_TX* txAppProtocol)
 {
     pSciTxAppProtocol = txAppProtocol; 

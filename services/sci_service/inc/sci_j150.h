@@ -169,6 +169,24 @@ extern SCI_APP_PROTOCOL_RX gSciAppProtocolRx_J150;
 
 #define SCI_TX_ONE_FRAME_LENGTH     (TX_LENGTH_DATA)
 
+/*********************Work Status**************************/
+#define J150_SCI_TX_BIG_ING                         (0x0C50)
+#define J150_SCI_TX_BIG_NORMAL                      (0x0C80)
+#define J150_SCI_TX_BIG_ABNORMAL                    (0x0CF0)
+
+#define J150_SCI_TX_CONFIG_PARA_ING                 (0x0C51)
+#define J150_SCI_TX_CONFIG_PARA_NORMAL              (0x0C81)
+#define J150_SCI_TX_CONFIG_PARA_ABNORMAL            (0x0CF1)
+
+#define J150_SCI_TX_MOTOR_RUN_ING                   (0x0C52)
+#define J150_SCI_TX_MOTOR_RUN_NORMAL                (0x0C82)
+#define J150_SCI_TX_MOTOR_RUN_ABNORMAL              (0x0CF2)
+
+#define J150_SCI_TX_MOTOR_STOP_ING                  (0x0C53)
+#define J150_SCI_TX_MOTOR_STOP_NORMAL               (0x0C83)
+#define J150_SCI_TX_MOTOR_STOP_ABNORMAL             (0x0CF3)
+/***********************************************************/
+/***********************System warning**********************/
 
 typedef struct _SCI_APP_PROTOCOL_TX
 {
