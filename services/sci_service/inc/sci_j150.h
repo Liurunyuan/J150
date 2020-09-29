@@ -188,6 +188,16 @@ extern SCI_APP_PROTOCOL_RX gSciAppProtocolRx_J150;
 /***********************************************************/
 /***********************System warning**********************/
 
+#define J150_MOTOR_OVER_TEMP_PROTECT                        BIT_0
+#define J150_DRIVER_OVER_TEMP_PROTECT                       BIT_1
+#define J150_BUS_VOLTAGE_LOW_PROTECT                        BIT_2
+#define J150_MOTRO_OVER_SPEED_PROTECT                       BIT_3
+
+#define J150_MOTOR_OVER_TEMP_WARNING                        BIT_4
+#define J150_DRIVER_OVER_TEMP_WARNING                       BIT_5
+#define J150_BUS_VOLTAGE_LOW_WARNING                        BIT_6
+#define J150_MOTRO_OVER_SPEED_WARNING                       BIT_7
+
 typedef struct _SCI_APP_PROTOCOL_TX
 {
     Uint16 txHead1;     /* 1 byte */
