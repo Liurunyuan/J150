@@ -504,6 +504,67 @@ void J150_SET_WORK_STATUS(J150_SYS_STATUS sysStatus)
     }
 }
 
+
+void J150_SET_SYS_STATUS1(J150_SYS_STATUS sysStatus)
+{
+
+}
+
+void J150_SET_SYS_STATUS2(J150_SYS_STATUS sysStatus)
+{
+
+}
+
+void J150_SET_FAULT_STATUS(J150_SYS_STATUS sysStatus)
+{
+
+}
+
+void J150_SET_FRAME_CNT(J150_SYS_STATUS sysStatus)
+{
+
+}
+
+void J150_SET_TARGET_SPEED(J150_SYS_STATUS sysStatus)
+{
+
+}
+
+void J150_SET_CURRENT_SPEED(J150_SYS_STATUS sysStatus)
+{
+
+}
+
+void J150_SET_BUS_VOLTAGE(J150_SYS_STATUS sysStatus)
+{
+
+}
+
+void J150_SET_BUS_CURRENT(J150_SYS_STATUS sysStatus)
+{
+
+}
+
+void J150_SET_SERVO_TEMP(J150_SYS_STATUS sysStatus)
+{
+
+}
+
+void J150_SET_MOTOR_TEMP(J150_SYS_STATUS sysStatus)
+{
+
+}
+
+void J150_SET_FW_VERSION(J150_SYS_STATUS sysStatus)
+{
+
+}
+
+void J150_SET_WORK_MODE(J150_SYS_STATUS sysStatus)
+{
+
+}
+
 void SCI_APP_PROTOCOL_TX_Init(SCI_APP_PROTOCOL_TX* txAppProtocol)
 {
     pSciTxAppProtocol = txAppProtocol; 
