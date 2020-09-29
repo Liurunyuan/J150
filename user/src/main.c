@@ -63,7 +63,6 @@ void main(void)
 	}
 	ENABLE_GLOBAL_INTERRUPT;
 #endif
-
 	
 	while(1)
 	{
@@ -87,6 +86,8 @@ void main(void)
 #else
 		SCI_RX_UnpackData(gScibRxQue);
 #endif
+
+		/* State Machine*/
 		SYS_STATE_MACHINE;
 
 #if(J150_SCI_PROTOCOL_TX == NOT_INCLUDE_FEATURE)

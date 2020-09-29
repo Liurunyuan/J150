@@ -1,17 +1,17 @@
 #include "sci_j150.h"
 #include <stdio.h>
 
-/*
-* J150 protocol layer API
-*/
+/***********************************************************************
+*                   J150 protocol layer API
+***********************************************************************/
 static Uint16 J150_APP_RX_PROTOCOL_GetCommand(unsigned char* data);
 static Uint16 J150_APP_RX_PROTOCOL_GetWorkMode(unsigned char* data);
 static Uint16 J150_APP_RX_PROTOCOL_GetTargetSpeed(unsigned char* data);
 Uint16 J150_APP_RX_PROTOCOL_UnpackPayLoad(void);
 
-/*
-* J150 transport layer API
-*/
+/***********************************************************************
+*                   J150 transport layer API
+***********************************************************************/
 static int J150_TransRxInit(void);
 static int J150_TransRxConfig(void);
 static int J150_TransRxStart(void);
@@ -22,9 +22,9 @@ static int J150_TransRxSaveGoodPacket(int len, SCIRXQUE* q);
 static int J150_TransRxCheckSum(SCIRXQUE* q);
 static int J150_TransRxUpdateHeadPos(SCIRXQUE* q);
 
-/*
-* J150 protocol and transport layer global variable
-*/
+/***********************************************************************
+*           J150 protocol and transport layer global variable
+***********************************************************************/
 Uint16 gTxFrameArray[SCI_TX_ONE_FRAME_LENGTH] = 
 {
     TX_HEAD1_DATA,          // 0
@@ -109,9 +109,10 @@ SCI_TRANSPORT_RX gSciTransRx_J150 =
 ██   ██  ██      ██ ████  ██     ██   ██  ██ ██      ██      ██   ██ ██    ██    ██    ██    ██ ██      ██    ██ ██      
  █████   ██ ███████  ██████      ██   ██ ██   ██     ██      ██   ██  ██████     ██     ██████   ██████  ██████  ███████ 
 ****************************************************************************************************************************/
-/*
-* API definition
-*/
+
+/***********************************************************************
+*                   J150 SCI Rx protocol layer API
+***********************************************************************/
 static Uint16 J150_APP_RX_PROTOCOL_GetCommand(unsigned char* data)
 {
     Uint16 command;

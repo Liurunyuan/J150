@@ -137,15 +137,7 @@ void Calculate_Three_Phase_Duty(SPWM_PARA* spwmPara)
 		   closeCH();
 		   closeCL();
 	   }
-//	   ful = (long)pa * (long)spwmPara->Duty;
-//	   spwmPara->Phase_Duty_U = (int16)(ful/32000);
-
-
-
 }
-
-
-int gSwitch = 0;
 
 void Spwm_Output(SPWM_PARA* spwmPara)
 {
@@ -199,25 +191,7 @@ void Spwm_Output(SPWM_PARA* spwmPara)
         //TODO generate alarm
     }
 
-	if(gSwitch)
-	{
-		Calculate_Three_Phase_Duty(spwmPara);
-	}
-	else
-	{
-		Disable_All_Epwms();
-	}
-	
-
-
-//    EPMW2_OUTPUT_DUAL_PLOARITY(750, spwmPara->Phase_Duty_W);
-//    EPMW3_OUTPUT_DUAL_PLOARITY(750, spwmPara->Phase_Duty_V);
-//    EPMW6_OUTPUT_DUAL_PLOARITY(750, spwmPara->Phase_Duty_U);
-
-//    EPMW1_OUTPUT_DUAL_PLOARITY(750, gtest2[0]);
-//    EPMW4_OUTPUT_DUAL_PLOARITY(750, gtest2[1]);
-//    EPMW5_OUTPUT_DUAL_PLOARITY(750, gtest2[2]);
-
+	Calculate_Three_Phase_Duty(spwmPara);
 }
 
 void Init_Spwm_Service(void)
